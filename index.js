@@ -5,33 +5,52 @@ let countHome = 0
 let countGuest = 0
 
 // Home Score Counter
-function freethrowHome() {
+function plusOneHome() {
     countHome += 1
     scoreHomeEl.textContent = countHome
 }
 
-function midrangeHome() {
+function plusTwoHome() {
     countHome += 2
     scoreHomeEl.textContent = countHome
 }
 
-function longthreeHome() {
+function plusthreeHome() {
     countHome += 3
     scoreHomeEl.textContent = countHome
 }
 
 // Guest Score Counter
-function freethrowGuest() {
+function plusOneGuest() {
     countGuest += 1
     scoreGuestEl.textContent = countGuest
 }
 
-function midrangeGuest() {
+function plusTwoGuest() {
     countGuest += 2
     scoreGuestEl.textContent = countGuest
 }
 
-function longthreeGuest() {
+function plusthreeGuest() {
     countGuest += 3
     scoreGuestEl.textContent = countGuest
+}
+
+let saveCountHome;
+let saveCountGuest;
+
+let saveHomeEl = document.getElementById("save-home-el")
+let saveGuestEl = document.getElementById("save-guest-el") 
+
+function saveEl() {
+    saveCountHome = countHome + "--"
+    saveHomeEl.textContent += saveCountHome
+
+    saveCountGuest = countGuest + "--"
+    saveGuestEl.textContent += saveCountGuest
+
+    scoreHomeEl.textContent = 0
+    countHome = 0
+    scoreGuestEl.textContent = 0
+    countGuest = 0
 }
