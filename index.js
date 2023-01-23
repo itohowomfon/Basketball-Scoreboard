@@ -36,21 +36,3 @@ function plusthreeGuest() {
     scoreGuestEl.textContent = countGuest
 }
 
-let saveCountHome;
-let saveCountGuest;
-
-let saveHomeEl = document.getElementById("save-home-el")
-let saveGuestEl = document.getElementById("save-guest-el") 
-
-function saveEl() {
-    saveCountHome = countHome + "--"
-    saveHomeEl.textContent += saveCountHome
-
-    saveCountGuest = countGuest + "--"
-    saveGuestEl.textContent += saveCountGuest
-
-    scoreHomeEl.textContent = 0
-    countHome = 0
-    scoreGuestEl.textContent = 0
-    countGuest = 0
-}
